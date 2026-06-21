@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your flight, guided — no signal required</title>
-<meta name="description" content="Scan your boarding pass before takeoff. Get a timeline of what to look for out the window, when — no internet needed once you're in the air.">
+<title>Window Seat: your flight, guided, no signal required</title>
+<meta name="description" content="Window Seat: scan your boarding pass before takeoff. Get a timeline of what to look for out the window, when. No internet needed once you're in the air.">
 <link rel="icon" type="image/png" href="images/app-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #F5F1E6;
-    --surface: #EDEADB;
-    --surface-active: #D4E0C6;
+    --bg: #E8F0DC;
+    --surface: #D7E6C4;
+    --surface-active: #C2D9A8;
     --card: #ffffff;
-    --border: #DCD6C2;
-    --text-primary: #2E3B2A;
-    --text-secondary: #5A5848;
-    --text-tertiary: #8A8870;
-    --accent: #4A5D45;
-    --accent-text: #F5F3EB;
+    --border: #BBD09F;
+    --text-primary: #283A22;
+    --text-secondary: #4C5C40;
+    --text-tertiary: #75895F;
+    --accent: #4F6B3E;
+    --accent-text: #F3F7EC;
     --radius-md: 8px;
     --radius-lg: 14px;
   }
@@ -28,7 +28,8 @@
   body {
     margin: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg);
+    background: linear-gradient(180deg, #DCEBC8 0%, var(--bg) 40%);
+    background-attachment: fixed;
     color: var(--text-primary);
     line-height: 1.6;
   }
@@ -45,7 +46,15 @@
     width: 64px;
     height: 64px;
     border-radius: 16px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .brand {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.75rem;
   }
   h1 {
     font-size: clamp(26px, 5vw, 32px);
@@ -108,6 +117,7 @@
   }
   .step-card {
     background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 1.25rem 1rem;
     text-align: center;
@@ -134,15 +144,16 @@
   }
   .gallery {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
     margin-bottom: 3rem;
   }
   .gallery figure {
     margin: 0;
     background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 10px;
+    padding: 14px;
   }
   .gallery img {
     width: 100%;
@@ -152,13 +163,16 @@
     border: 1px solid var(--border);
   }
   .gallery figcaption {
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 500;
     color: var(--text-secondary);
     text-align: center;
-    margin-top: 8px;
+    margin-top: 12px;
   }
   .panel {
     background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
     border-radius: var(--radius-lg);
     padding: 1.5rem;
     margin-bottom: 1.25rem;
@@ -189,7 +203,7 @@
     margin: 0 0 1.25rem;
   }
   @media (max-width: 600px) {
-    .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .gallery { grid-template-columns: 1fr; gap: 16px; }
   }
   @media (max-width: 480px) {
     .steps { grid-template-columns: 1fr; }
@@ -201,9 +215,10 @@
 <div class="wrap">
 
   <div class="hero">
-    <img src="images/app-icon.png" alt="App icon: a plane window with mountains" class="app-icon">
-    <h1>Your flight, guided — no signal required.</h1>
-    <p class="subhead">Scan your boarding pass before takeoff. Get a timeline of what to look for, when — no internet needed once you're in the air.</p>
+    <img src="images/app-icon.png" alt="Window Seat app icon: a plane window with mountains" class="app-icon">
+    <p class="brand">Window Seat</p>
+    <h1>Your flight, guided. No signal required.</h1>
+    <p class="subhead">Scan your boarding pass before takeoff. Get a timeline of what to look for, when. No internet needed once you're in the air.</p>
 
     <form class="signup" id="form-top">
       <input type="email" name="email" placeholder="you@email.com" required>
@@ -230,7 +245,7 @@
     </div>
   </div>
 
-  <p class="section-label">See it in action</p>
+  <p class="section-label">App concept</p>
   <div class="gallery">
     <figure>
       <img src="images/01-scan.png" alt="Scan your boarding pass screen">
@@ -254,7 +269,7 @@
     <div class="panel-icon">🌿</div>
     <div>
       <p class="title">Built for looking up, not down</p>
-      <p class="desc">Flying is one of the rare stretches of time with nowhere to be and nothing demanding your attention. A short glance, then the phone goes back in the pocket — not another screen to stare at for three hours.</p>
+      <p class="desc">Flying is one of the rare stretches of time with nowhere to be and nothing demanding your attention. A short glance, then the phone goes back in the pocket. Not another screen to stare at for three hours.</p>
     </div>
   </div>
 
@@ -262,7 +277,7 @@
     <div class="panel-icon">📡</div>
     <div>
       <p class="title">Why offline matters</p>
-      <p class="desc">In-flight WiFi is slow, spotty, or costs extra — when it works at all. Everything here is ready before you board, so the plane's connection is never part of the plan.</p>
+      <p class="desc">In-flight WiFi is slow, spotty, or costs extra, when it works at all. Everything here is ready before you board, so the plane's connection is never part of the plan.</p>
     </div>
   </div>
 
@@ -312,7 +327,7 @@
         if (data.success) {
           btn.textContent = "You're on the list";
           input.disabled = true;
-          note.textContent = "Thanks — you'll hear from us when it's ready.";
+          note.textContent = "Thanks, you'll hear from us when it's ready.";
         } else {
           btn.textContent = "Try again";
           btn.disabled = false;
